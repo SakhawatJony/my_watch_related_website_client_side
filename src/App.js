@@ -7,6 +7,7 @@ import Login from './Components/Login/Login/Login';
 import Register from './Components/Login/Register/Register';
 import NotFound from './Components/NotFound/NotFound';
 import AuthProvider from './Components/Context/AuthProvider/AuthProvider';
+import PrivateRoute from './Components/Login/PrivateRoute/PrivateRoute';
 import ShopDetails from './Components/Home/ShopDetails/ShopDetails';
 import Dashboard from './Components/Dashboard/Dashboard/Dashboard';
 import Reviews from './Components/Home/Reviews/Reviews';
@@ -26,9 +27,9 @@ function App() {
           <Route path="/shop">
             <Shop></Shop>
           </Route>
-          <Route  path="/shopdetails/:shopId">
+          <PrivateRoute  path="/shopdetails/:shopId">
         <ShopDetails></ShopDetails>
-      </Route>
+      </PrivateRoute>
           <Route path="/login">
             <Login></Login>
           </Route>

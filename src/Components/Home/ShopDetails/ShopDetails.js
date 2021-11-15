@@ -23,7 +23,7 @@ const ShopDetails = () => {
   const [shops,setShops] = useState([]);
   const {user} = useAuth();
     useEffect(()=>{
-    fetch('http://localhost:5000/shops')
+    fetch('https://obscure-forest-04770.herokuapp.com/shops')
     .then(res => res.json())
     .then(data=>setShops(data))
     },[])
@@ -32,7 +32,7 @@ const ShopDetails = () => {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const onSubmit = data => {
      
-        fetch('http://localhost:5000/orders', {
+        fetch('https://obscure-forest-04770.herokuapp.com/orders', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

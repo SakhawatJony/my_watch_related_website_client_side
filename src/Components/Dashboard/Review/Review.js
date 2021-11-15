@@ -14,7 +14,7 @@ const Review = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
         
-        fetch('http://localhost:5000/reviews', {
+        fetch('https://obscure-forest-04770.herokuapp.com/reviews', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

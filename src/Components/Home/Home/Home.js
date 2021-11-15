@@ -13,7 +13,7 @@ const Home = () => {
     const [shops,setShops] = useState([])
     
     useEffect(()=>{
-    fetch('http://localhost:5000/shops')
+    fetch('https://obscure-forest-04770.herokuapp.com/shops')
     .then(res=>res.json())
     .then(data=>setShops(data))
     },[])
